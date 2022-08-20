@@ -10,6 +10,7 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 ### Python Reposu
 ```shell
+sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 ```
