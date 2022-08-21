@@ -1,16 +1,20 @@
 # OYK-Python-2022
 
 
-### Google Chrome Download Link
+# Sanal Makina Komutlari
 ```shell
-https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
-sudo dpkg -i google-chrome-stable_current_amd64.deb
+# Sanal Makinayi baslat
+vagrant up
+
+# Sanal Makinayi durdur
+vagrant halt
+
+# Sanal Makinayi sil
+vagrant destroy
 ```
 
-### Python Reposu
+# Python icin paket kurulumu
 ```shell
-sudo apt update
-sudo apt-get install software-properties-common
-sudo add-apt-repository ppa:deadsnakes/ppa
+pipenv install [paket-adi]
 ```
