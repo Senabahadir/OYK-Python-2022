@@ -18,3 +18,9 @@ vagrant destroy
 ```shell
 pipenv install [paket-adi]
 ```
+
+
+# Ogrenilmesi Gerekenler
+* Python
+* Django
+* Git
