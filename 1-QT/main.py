@@ -1,7 +1,4 @@
-from PySide2.QtWidgets import QApplication, QMainWindow
-from statik import HesapMakinesi
-
-
+from PySide2.QtWidgets import QApplication
 
 app = QApplication()
 
