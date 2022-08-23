@@ -28,10 +28,11 @@ class Ui_ZarOyunu(object):
 
         self.verticalLayout.addWidget(self.txtZar)
 
-        self.pushButton = QPushButton(ZarOyunu)
-        self.pushButton.setObjectName(u"pushButton")
+        self.btnAt = QPushButton(ZarOyunu)
+        self.btnAt.setObjectName(u"btnAt")
+        self.btnAt.setEnabled(False)
 
-        self.verticalLayout.addWidget(self.pushButton)
+        self.verticalLayout.addWidget(self.btnAt)
 
         self.lblSonuc = QLabel(ZarOyunu)
         self.lblSonuc.setObjectName(u"lblSonuc")
@@ -48,7 +49,7 @@ class Ui_ZarOyunu(object):
     def retranslateUi(self, ZarOyunu):
         ZarOyunu.setWindowTitle(QCoreApplication.translate("ZarOyunu", u"Zar Oyunu V1.0", None))
         self.txtZar.setInputMask(QCoreApplication.translate("ZarOyunu", u"0", None))
-        self.pushButton.setText(QCoreApplication.translate("ZarOyunu", u"Zar At", None))
+        self.btnAt.setText(QCoreApplication.translate("ZarOyunu", u"Zar At", None))
         self.lblSonuc.setText(QCoreApplication.translate("ZarOyunu", u"-", None))
     # retranslateUi
 
