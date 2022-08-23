@@ -24,3 +24,8 @@ pipenv install [paket-adi]
 * Python
 * Django
 * Git
+
+# ui dosyalarini python dosyasina cevirme
+```shell
+pyside2-uic [ui-dosya adi].ui -o [python-dosya adi].py
+```
