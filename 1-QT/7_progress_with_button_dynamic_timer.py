@@ -26,9 +26,19 @@ def zar_at():
     timer.stop()
     mevcut_deger = window.progressBar.value()
     if mevcut_deger < 50:
-        window.lblSonuc.setText('Kazandin!!!!!!')
+        window.lblStatus.setText('Kazandin!!!!!!')
+        soldaki_label_degeri = int(window.lblUser.text())
+        soldaki_label_degeri = soldaki_label_degeri + 1
+        str_soldaki_label_degeri = str(soldaki_label_degeri)
+        window.lblUser.setText(str_soldaki_label_degeri)
     else:
-        window.lblSonuc.setText('Kaybettin.')
+        window.lblStatus.setText('Kaybettin.')
+        sagdaki_label_degeri = int(window.lblComputer.text())
+        sagdaki_label_degeri = sagdaki_label_degeri + 1
+        str_sagdaki_label_degeri = str(sagdaki_label_degeri)
+        window.lblComputer.setText(str_sagdaki_label_degeri)
+
+# window.btnStart.setEnabled(False)   # ilgili nesneyi bloke eder.
 
 window.btnStart.clicked.connect(timer.start)
 window.btnStop.clicked.connect(zar_at)
