@@ -7,6 +7,12 @@ name = "pypi"
 pyside2 = "*"
 
 [dev-packages]
+black = "*"
+flake8 = "*"
+bandit = "*"
 
 [requires]
 python_version = "3.9"
+
+[pipenv]
+allow_prereleases = true
