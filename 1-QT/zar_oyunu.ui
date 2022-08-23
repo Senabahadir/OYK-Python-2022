@@ -27,7 +27,10 @@
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="btnAt">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="text">
       <string>Zar At</string>
      </property>
