@@ -21,8 +21,8 @@ class Widget(QWidget):
         self.button_artir.setGeometry(120, 70, 100, 50)
         self.button_artir.setText("Artir")
 
-        self.button_azalt.clicked.connect(self.azalt)
-        self.button_artir.clicked.connect(self.arttir)
+        self.button_azalt.clicked.connect(lambda: self.degistir(-1))
+        self.button_artir.clicked.connect(lambda: self.degistir(1))
 
         self.resize(250, 250)
         font = self.font()
@@ -30,14 +30,9 @@ class Widget(QWidget):
         self.setFont(font)
         self.show()
 
-    def azalt(self):
+    def degistir(self, deger):
         simdiki_deger = int(self.label.text())
-        simdiki_deger -= 1
-        self.label.setText(str(simdiki_deger))
-
-    def arttir(self):
-        simdiki_deger = int(self.label.text())
-        simdiki_deger += 1
+        simdiki_deger += deger
         self.label.setText(str(simdiki_deger))
 
 
