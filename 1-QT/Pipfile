@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 pyside2 = "*"
+requests = "*"
+pyinstaller = "*"
 
 [dev-packages]
 black = "*"
