@@ -1,5 +1,5 @@
 from PySide2.QtCore import Qt
-from PySide2.QtWidgets import QApplication, QLabel, QPushButton, QVBoxLayout, QWidget
+from PySide2.QtWidgets import QApplication, QLabel, QPushButton,QHBoxLayout, QVBoxLayout, QWidget
 
 
 class Widget(QWidget):
@@ -7,15 +7,19 @@ class Widget(QWidget):
         super().__init__()
 
         layout = QVBoxLayout()
+        ylayout = QHBoxLayout()
 
         self.label = QLabel("0")
         self.label.setAlignment(Qt.AlignCenter)
         button1 = QPushButton("Artir")
         button2 = QPushButton("Azalt")
 
+        
         layout.addWidget(self.label)
-        layout.addWidget(button1)
-        layout.addWidget(button2)
+        layout.addLayout(ylayout)
+        
+        ylayout.addWidget(button1)
+        ylayout.addWidget(button2)
 
         self.setLayout(layout)
 
