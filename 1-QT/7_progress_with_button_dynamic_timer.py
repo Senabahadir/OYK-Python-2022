@@ -24,23 +24,38 @@ timer.timeout.connect(progressbar_degistir)
 
 def zar_at():
     timer.stop()
+    window.btnStop.setEnabled(False)
+    window.btnStart.setEnabled(True)
     mevcut_deger = window.progressBar.value()
     if mevcut_deger < 50:
         window.lblStatus.setText('Kazandin!!!!!!')
         soldaki_label_degeri = int(window.lblUser.text())
         soldaki_label_degeri = soldaki_label_degeri + 1
+        if soldaki_label_degeri == 10:
+            print('Oyuncu kazandi.')
+            window.btnStart.setEnabled(False)
+            window.btnStop.setEnabled(False)
         str_soldaki_label_degeri = str(soldaki_label_degeri)
         window.lblUser.setText(str_soldaki_label_degeri)
     else:
         window.lblStatus.setText('Kaybettin.')
         sagdaki_label_degeri = int(window.lblComputer.text())
         sagdaki_label_degeri = sagdaki_label_degeri + 1
+        if sagdaki_label_degeri == 10:
+            print('Bilgisayar kazandi.')
+            window.btnStart.setEnabled(False)
+            window.btnStop.setEnabled(False)
         str_sagdaki_label_degeri = str(sagdaki_label_degeri)
         window.lblComputer.setText(str_sagdaki_label_degeri)
 
 # window.btnStart.setEnabled(False)   # ilgili nesneyi bloke eder.
 
-window.btnStart.clicked.connect(timer.start)
+def press_start():
+    timer.start()
+    window.btnStart.setEnabled(False)
+    window.btnStop.setEnabled(True)
+
+window.btnStart.clicked.connect(press_start)
 window.btnStop.clicked.connect(zar_at)
 
 window.show()  # Onemli formu goster.
