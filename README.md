@@ -25,7 +25,23 @@ pipenv install [paket-adi]
 * Django
 * Git
 
-# ui dosyalarini python dosyasina cevirme
+### ui dosyalarini python dosyasina cevirme
 ```shell
 pyside2-uic [ui-dosya adi].ui -o [python-dosya adi].py
+```
+
+-------
+## Paketleme
+
+* Pipfile duzenlendi pyinstaller eklendi.
+* kurulumu yapmak icin proje icinde vscode terminalden pipenv install komutunu girin.
+
+### yazilim paketleme icin kurulmasi gereken paket
+```shell
+sudo apt install python3.9-dev
+```
+
+### yazilim paketleme
+```shell
+pyinstaller 10_crypto_api.py --onefile --windowed
 ```
