@@ -1,7 +1,5 @@
-{% extends 'base.html' %}
 {% load humanize %}
-
-{% block content %}
+{% include 'menu.html' %}
 <center>
     
 <h1>OYK Python 2022 Blog</h1>   
@@ -17,5 +15,3 @@
     <a href="{% url 'blog_detay' post.link %}">Detay</a>
 {% endfor %}
 </center>
-
-{% endblock %}
