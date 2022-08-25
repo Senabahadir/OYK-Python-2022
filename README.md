@@ -45,3 +45,24 @@ sudo apt install python3.9-dev
 ```shell
 pyinstaller 10_crypto_api.py --onefile --windowed
 ```
+
+
+# Django
+
+* Django kurulumu
+```shell
+cd Desktop
+mkdir django-projesi
+cd django-projesi
+pipenv install django
+code .
+pipenv shell
+```
+
+* django proje baslatma
+```shell
+django-admin startproject config .
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+```

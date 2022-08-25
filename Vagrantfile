@@ -1,11 +1,11 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "gusztavvargadr/ubuntu-desktop"
   config.vm.synced_folder ".", "/home/vagrant/Desktop/oyk-python"
+  config.vm.network "public_network"
   config.vm.provider "virtualbox" do |v|
     v.name = "OYK-Python-2022"
     v.memory = 2048
     v.gui = true
-    config.vm.network "public_network"
     v.customize [ "modifyvm", :id, "--uartmode1", "disconnected" ]
   end
 
