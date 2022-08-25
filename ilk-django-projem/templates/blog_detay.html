@@ -1,0 +1,7 @@
+{% include 'menu.html' %}
+<center>
+<h1>{{ post.baslik }}</h1>
+<a href="{% url 'blog_list' %}">Geri</a>
+<img src="{{ post.resim.url }}" alt="" width="200" height="200">
+<p>{{ post.icerik }}</p>
+</center>
