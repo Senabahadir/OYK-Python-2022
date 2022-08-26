@@ -5,4 +5,4 @@ from wallet.models import Cuzdan
 class CuzdanForm(forms.ModelForm):
     class Meta:
         model = Cuzdan
-        fields = ['para_birimi']
+        fields = '__all__'
