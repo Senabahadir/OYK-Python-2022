@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'blog',
     'wallet',
-    'vip',
 ]
 
 MIDDLEWARE = [
