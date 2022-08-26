@@ -7,9 +7,9 @@
 {% if request.user.is_authenticated %}
 
 Hosgeldin {{ request.user.get_full_name }}
-<h3>Cuzdanlariniz</h3><a href="{% url 'wallet_add' %}">Cuzdan Ekle</a><br><br>
+<h3>Cuzdanlariniz</h3><a href="{% url 'wallet:wallet_add' %}">Cuzdan Ekle</a><br><br>
 {% for cuzdan in cuzdanlar %}
-<b>{{ cuzdan.get_para_birimi_display }} : </b>{{ cuzdan.bakiye }}{{cuzdan.para_birimi}} <br>
+<b>{{ cuzdan.get_para_birimi_display }} : </b>{{ cuzdan.bakiye }}{{cuzdan.para_birimi}} <a href="{{ cuzdan.get_absolute_url }}">X</a> <br>
 {% empty %}
 Hicbir cuzdan bulunamadi, lutfen cuzdan ekleyin.
 {% endfor %}
