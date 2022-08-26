@@ -1,6 +1,28 @@
-{% include 'menu.html' %}
+{% extends 'base.html' %}
+
+{% block content %}
+
+<br><br><br>
+
+{% if request.user.is_authenticated %}
+
+Hosgeldin {{ request.user.get_full_name }}
+<h3>Cuzdanlariniz</h3>
+{% for cuzdan in cuzdanlar %}
+<b>{{ cuzdan.get_para_birimi_display }} : </b>{{ cuzdan.bakiye }}{{cuzdan.para_birimi}} <br>
+{% endfor %}
+
+{% else %}
+
+Bakiyeyi gormek icin giris yapmalisin.
+
+{% endif %}
+
+
+<br><br><br><br><br><br>
 <h1>Home</h1>
 <h2>Simdiki zaman</h2>
-<h3>Bakiyeniz : {{bakiye}}</h3>
 {% now "H:i" %}
 {% lorem %}
+
+{% endblock %}

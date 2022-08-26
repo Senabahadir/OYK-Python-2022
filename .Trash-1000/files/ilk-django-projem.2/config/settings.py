@@ -26,6 +26,8 @@ SECRET_KEY = 'django-insecure-p=@glhty6wi)u-b-yun9rvzi-@ak821%o4^ni+y143f=8_3w=w
 DEBUG = True
 
 ALLOWED_HOSTS = []
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 
 # Application definition
@@ -39,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     'blog',
+    'wallet',
 ]
 
 MIDDLEWARE = [
