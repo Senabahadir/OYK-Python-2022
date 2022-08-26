@@ -1,5 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
 <h1>Home</h1>
 <h2>Simdiki zaman</h2>
 <h3>Bakiyeniz : {{bakiye}}</h3>
 {% now "H:i" %}
 {% lorem %}
+
+{% endblock %}
