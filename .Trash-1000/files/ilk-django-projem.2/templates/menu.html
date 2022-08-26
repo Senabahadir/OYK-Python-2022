@@ -28,10 +28,6 @@ li a:hover {
     <li><img src="{% static 'logo.png' %}" width="50" height="50" alt="My image"></li>
     <li><a href="{% url 'home' %}">Home</a></li>
     <li><a href="{% url 'blog_list' %}">Blog</a></li>
-    {% if request.user.is_authenticated %}
-    <li style="float:right"><a href="{% url 'logout' %}">Cikis Yap</a></li>
-    {% else %}
     <li style="float:right"><a href="{% url 'login' %}">Giris Yap</a></li>
-    {% endif %}
-    
+    <li style="float:right"><a href="{% url 'logout' %}">Cikis Yap</a></li>
 </ul>

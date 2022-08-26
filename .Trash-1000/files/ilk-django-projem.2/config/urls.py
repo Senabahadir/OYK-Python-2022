@@ -9,7 +9,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls')),
     path('kullanici/', include('django.contrib.auth.urls')),
-    path('wallet/', include('wallet.urls')),
 
     path('', home, name='home'),
     # path('python/', python),

@@ -10,8 +10,6 @@ Hosgeldin {{ request.user.get_full_name }}
 <h3>Cuzdanlariniz</h3>
 {% for cuzdan in cuzdanlar %}
 <b>{{ cuzdan.get_para_birimi_display }} : </b>{{ cuzdan.bakiye }}{{cuzdan.para_birimi}} <br>
-{% empty %}
-Hicbir cuzdan bulunamadi, lutfen cuzdan ekleyin.
 {% endfor %}
 
 {% else %}
