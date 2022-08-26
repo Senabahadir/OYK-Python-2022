@@ -2,6 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
+
+    print(request.user.subsribe.get_badge_url())
+
     context = {}
 
     if request.user.is_authenticated:
