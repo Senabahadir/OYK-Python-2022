@@ -10,5 +10,4 @@ class SubscribeAdmin(admin.ModelAdmin):
     search_fields= ['user__username']
 
 
-
 admin.site.register(Subscribe, SubscribeAdmin)

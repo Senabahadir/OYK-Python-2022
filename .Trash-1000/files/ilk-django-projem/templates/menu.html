@@ -28,4 +28,11 @@ li a:hover {
     <li><img src="{% static 'logo.png' %}" width="50" height="50" alt="My image"></li>
     <li><a href="{% url 'home' %}">Home</a></li>
     <li><a href="{% url 'blog_list' %}">Blog</a></li>
+    <li><a href="{% url 'vip:vip_home' %}">VIP</a></li>
+    {% if request.user.is_authenticated %}
+    <li style="float:right"><a href="{% url 'logout' %}">Cikis Yap</a></li>
+    <li style="float:right"><a href=""><img src="{{ request.user.subsribe.get_badge_url }}" width="32" height="32">{{ request.user.get_full_name }}</a></li>
+    {% else %}
+    <li style="float:right"><a href="{% url 'login' %}">Giris Yap</a></li>
+    {% endif %}
 </ul>

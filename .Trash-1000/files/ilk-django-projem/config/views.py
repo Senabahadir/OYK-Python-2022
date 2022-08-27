@@ -1,8 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+
 def home(request):
-    bakiye = 300
-    return render(request, 'index.html', {'bakiye': bakiye})
+
+    print(request.user.subsribe.get_badge_url())
+
+    context = {}
+
+    if request.user.is_authenticated:
+        context['cuzdanlar'] = request.user.cuzdanlar.all()
+
+    return render(request, 'index.html', context)
 
 def isim_yaz(request, isim):
     return render(request, 'isim.html', {'isim': isim})

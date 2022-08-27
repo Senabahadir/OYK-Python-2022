@@ -6,7 +6,7 @@ def home(request):
     yayinlanmis_postlar = Post.objects.filter(yayinla=True)
 
     context = {
-        'postlar': yayinlanmis_postlar
+        'postlar': yayinlanmis_postlar,
     }
 
     return render(request, 'blog_list.html', context)

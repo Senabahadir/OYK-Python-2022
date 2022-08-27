@@ -11,6 +11,7 @@ urlpatterns = [
     path('kullanici/', include('django.contrib.auth.urls')),
     path('wallet/', include('wallet.urls', namespace='wallet')),
     path('vip/', include('vip.urls', namespace='vip')),
+    path('__debug__/', include('debug_toolbar.urls')),
 
     path('', home, name='home'),
     # path('python/', python),
