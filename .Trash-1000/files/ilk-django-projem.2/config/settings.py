@@ -25,12 +25,11 @@ SECRET_KEY = 'django-insecure-p=@glhty6wi)u-b-yun9rvzi-@ak821%o4^ni+y143f=8_3w=w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = []
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
-if DEBUG:
-    INTERNAL_IPS = ["127.0.0.1"]
+INTERNAL_IPS = ["127.0.0.1"]
 
 
 # Application definition
@@ -46,10 +45,8 @@ INSTALLED_APPS = [
     'blog',
     'wallet',
     'vip',
+    'debug_toolbar',
 ]
-
-if DEBUG:
-    INSTALLED_APPS = INSTALLED_APPS + ['debug_toolbar']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -59,10 +56,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
-if DEBUG:
-    MIDDLEWARE = MIDDLEWARE + ['debug_toolbar.middleware.DebugToolbarMiddleware']
 
 ROOT_URLCONF = 'config.urls'
 
