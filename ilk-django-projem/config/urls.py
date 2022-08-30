@@ -11,6 +11,7 @@ urlpatterns = [
     path('kullanici/', include('django.contrib.auth.urls')),
     path('wallet/', include('wallet.urls', namespace='wallet')),
     path('vip/', include('vip.urls', namespace='vip')),
+    path('chart/', include('chart.urls')),
     
 
     path('', home, name='home'),

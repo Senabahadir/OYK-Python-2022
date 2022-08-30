@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'blog',
     'wallet',
     'vip',
+    'chart',
+    # 'chartjs',
 ]
 
 if DEBUG:
