@@ -4,7 +4,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "public_network"
   config.vm.provider "virtualbox" do |v|
     v.name = "OYK-Python-2022"
-    v.memory = 2048
+    v.memory = 4096
     v.gui = true
     v.customize [ "modifyvm", :id, "--uartmode1", "disconnected" ]
   end
