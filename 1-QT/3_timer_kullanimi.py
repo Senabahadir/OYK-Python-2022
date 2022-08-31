@@ -18,8 +18,8 @@ button.clicked.connect(tiklama)
 
 fonk = lambda x, y: print(x, y)
 
-timer = QTimer()
-timer.setInterval(1010)
+timer = QTimer()            #Bellekte çok yer tutar. Çok kullanmak iyi değil.
+timer.setInterval(1010)     #1010 milisaniye sonra bir sonraki kod otomatik çalışır.(Bir sonraki fonksiyon çalışır.)
 timer.start()
 timer.timeout.connect(fonk("Hello", "World"))
 
